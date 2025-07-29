@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
+
+@font-face {
+	font-family: "Trajan-Pro-Regular";
+	src: url("https://raw.githubusercontent.com/icastelito/fonts/main/TrajanPro-Regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Trajan-Pro-Bold";
+	src: url("https://github.com/icastelito/fonts/blob/main/TrajanPro-Bold.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+:root {
+	--primary-color: #2c2c2c;
+	--secondary-color: #4a4a4a;
+	--accent-color: #1a1a1a;
+	--background-color: #f8f6f0;
+	--card-background: #ffffff;
+	--text-color: #2c2c2c;
+	--border-color: #d4d4d4;
+	--success-color: #4a4a4a;
+	--warning-color: #666666;
+	--paper-texture: #fefefe;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--success-color);
+	background-size: 100% 1.2em;
+	min-height: 100vh;
+	padding: 20px;
+	color: var(--text-color);
+	line-height: 1.6;
+}
+
+#character-info {
+	background-color: var(--card-background);
+	border: 1px solid var(--border-color);
+	border-radius: 8px;
+	padding: 20px;
+	margin-top: 20px;
+	width: 40dvw;
+}
+
+#character-info h2 {
+	color: var(--primary-color);
+	margin-bottom: 10px;
+}
+
+h1 {
+	font-family: "Philosopher", serif;
+	font-weight: 400;
+	color: var(--primary-color);
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+h2 {
+	font-family: "Philosopher", serif;
+	font-weight: 700;
+	color: var(--primary-color);
+	margin-bottom: 10px;
+}
+
+fieldset {
+	border: 1px solid var(--border-color);
+	border-radius: 4px;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+legend {
+	font-family: "Philosopher", serif;
+	font-weight: 700;
+	color: var(--primary-color);
+	padding: 0 10px;
+	font-size: 1.1rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.form-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 15px;
+	margin-bottom: 15px;
+}
+
+.form-field {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	min-width: 200px;
+}
+
+.form-field label {
+	margin-bottom: 5px;
+	color: var(--primary-color);
+	font-family: "Trajan-Pro-Regular", serif;
+	font-size: 0.9rem;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.form-field input,
+.form-field select {
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid var(--border-color);
+	background: transparent;
+	padding: 8px 0;
+	font-family: "Source Serif 4", serif;
+	font-size: 1rem;
+	color: var(--text-color);
+}
+
+.form-field input:focus,
+.form-field select:focus {
+	outline: none;
+	border-bottom-color: var(--primary-color);
+}
+
+.character-form-input input:focus,
+.character-form-input select:focus {
+	outline: none;
+	border-bottom: 2px solid var(--primary-color);
+}

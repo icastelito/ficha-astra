@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ficha de Personagem - Sistema Astra</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<header>
+			<h1 class="philosopher-bold">Ficha de Personagem - Astra</h1>
+		</header>
+		<main>
+			<section id="character-info">
+				<h2>Informações do Personagem</h2>
+				<form id="character-form">
+					<fieldset>
+						<legend>Identidade</legend>
+
+						<div class="form-field">
+							<input type="text" id="name" name="name" required />
+							<label for="name">Nome:</label>
+						</div>
+
+						<div class="form-row">
+							<div class="form-field">
+								<input type="text" id="kin" name="kin" required />
+								<label for="kin">Povo:</label>
+							</div>
+							<div class="form-field">
+								<input type="text" id="community" name="community" required />
+								<label for="community">Comunidade:</label>
+							</div>
+						</div>
+
+						<div class="form-row">
+							<div class="form-field">
+								<input type="text" id="class" name="class" required />
+								<label for="class">Classe:</label>
+							</div>
+							<div class="form-field">
+								<input type="text" id="especialization" name="especialization" />
+								<label for="especialization">Especialização:</label>
+							</div>
+						</div>
+					</fieldset>
+				</form>
+			</section>
+		</main>
+		<footer>
+			<p>&copy; 2023 Sistema Astra</p>
+		</footer>
+	</body>
+</html>

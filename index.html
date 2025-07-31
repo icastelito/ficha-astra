@@ -10,63 +10,72 @@
 		<header>
 			<h1 class="philosopher-bold">Ficha de Personagem - Astra</h1>
 		</header>
-		<main>
-			<section class="character-header">
-				<form class="character-info">
-					<div class="form-field">
-						<input type="text" id="name" name="name" required />
-						<label for="name">Nome</label>
-					</div>
+		<div class="a4-container">
+			<main>
+				<section>
+					<form class="character-info">
+						<div class="form-field">
+							<input type="text" id="name" name="name" required />
+							<label for="name">Nome</label>
+						</div>
 
-					<div class="form-row">
-						<div class="form-field">
-							<input type="text" id="kin" name="kin" required />
-							<label for="kin">Povo</label>
+						<div class="form-row">
+							<div class="form-field">
+								<input type="text" id="kin" name="kin" required />
+								<label for="kin">Povo</label>
+							</div>
+							<div class="form-field">
+								<input type="text" id="community" name="community" required />
+								<label for="community">Comunidade</label>
+							</div>
 						</div>
-						<div class="form-field">
-							<input type="text" id="community" name="community" required />
-							<label for="community">Comunidade</label>
-						</div>
-					</div>
 
-					<div class="form-row">
-						<div class="form-field">
-							<input type="text" id="class" name="class" required />
-							<label for="class">Classe</label>
+						<div class="form-row">
+							<div class="form-field">
+								<input type="text" id="class" name="class" required />
+								<label for="class">Classe</label>
+							</div>
+							<div class="form-field">
+								<input type="text" id="especialization" name="especialization" />
+								<label for="especialization">Especialização</label>
+							</div>
 						</div>
-						<div class="form-field">
-							<input type="text" id="especialization" name="especialization" />
-							<label for="especialization">Especialização</label>
+					</form>
+				</section>
+				<section class="character-stats">
+						<div class="stat-block-top">
+							<div class="stat-row">
+								<label for="strength">Força</label>
+								<input type="number" id="strength" name="strength" min="0" max="20" />
+							</div>
+							<div class="stat-row">
+								<label for="agility">Agilidade</label>
+								<input type="number" id="agility" name="agility" min="0" max="20" />
+							</div>
+							<div class="stat-row">
+								<label for="precision">Precisão</label>
+								<input type="number" id="precision" name="precision" min="0" max="20" />
+							</div>
+						</div>
+						<div class="stat-block-bottom">
+							<div class="stat-row">
+								<label for="inteligence">Inteligência</label>
+								<input type="number" id="inteligence" name="inteligence" min="0" max="20" />
+							</div>
+							<div class="stat-row">
+								<label for="wisdom">Sabedoria</label>
+								<input type="number" id="wisdom" name="wisdom" min="0" max="20" />
+							</div>
+							<div class="stat-row">
+								<label for="charisma">Carisma</label>
+								<input type="number" id="charisma" name="charisma" min="0" max="20" />
+							</div>
 						</div>
 					</div>
-				</form>
-				<aside class="flags-container">
-					<form class="flag">
-						<label for="flag1">Pontos de Vida</label>
-						<div class="flag-input">
-							<input type="number" min="0" class="flag-input-field" />
-							<label for="flag1">25</label>
-						</div>
-					</form>
-					<form class="flag">
-						<label for="flag2">Pontos de Mana</label>
-						<div class="flag-input">
-							<input type="number" min="0" class="flag-input-field" />
-							<label for="flag2">10</label>
-						</div>
-					</form>
-					<form class="flag">
-						<label for="flag3">Pontos de Estresse</label>
-						<div class="flag-input">
-							<input type="number" min="0" class="flag-input-field" />
-							<label for="flag3">0</label>
-						</div>
-					</form>
-				</aside>
-			</section>
-		</main>
+			</main>
+		</div>
 		<footer>
-			<p>&copy; 2023 Sistema Astra</p>
+			<p>&copy; 2025 Sistema Astra</p>
 		</footer>
 	</body>
 </html>

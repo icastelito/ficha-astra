@@ -5,13 +5,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Ficha de Personagem - Sistema Astra</title>
 		<link rel="stylesheet" href="styles.css" />
+		<script src="script.js" defer></script>
+		<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 	</head>
 	<body>
 		<header>
 			<h1 class="philosopher-bold">Ficha de Personagem - Astra</h1>
 		</header>
 		<div class="a4-container">
-			<main>
+			<main class="character-header">
 				<section>
 					<form class="character-info">
 						<div class="form-field">
@@ -42,36 +45,103 @@
 						</div>
 					</form>
 				</section>
+				<section class="character-image-container" onclick="toggleCharacterImage()">
+					<ion-icon name="person" class="character-icon" id="character-display"></ion-icon>
+					<img
+						src="exemple-character.jpeg"
+						alt="Imagem do personagem"
+						class="character-image"
+						id="character-image"
+						style="display: none"
+					/>
+				</section>
 				<section class="character-stats">
-						<div class="stat-block-top">
+					<div>
+						<div class="stat-block-row">
 							<div class="stat-row">
-								<label for="strength">Força</label>
-								<input type="number" id="strength" name="strength" min="0" max="20" />
+								<label for="strength">FOR</label>
+								<input
+									class="stat-input"
+									type="number"
+									id="strength"
+									name="strength"
+									min="0"
+									max="20"
+								/>
 							</div>
 							<div class="stat-row">
-								<label for="agility">Agilidade</label>
-								<input type="number" id="agility" name="agility" min="0" max="20" />
+								<label for="agility">AGI</label>
+								<input class="stat-input" type="number" id="agility" name="agility" min="0" max="20" />
 							</div>
 							<div class="stat-row">
-								<label for="precision">Precisão</label>
-								<input type="number" id="precision" name="precision" min="0" max="20" />
+								<label for="precision">PRE</label>
+								<input
+									class="stat-input"
+									type="number"
+									id="precision"
+									name="precision"
+									min="0"
+									max="20"
+								/>
 							</div>
 						</div>
-						<div class="stat-block-bottom">
+						<div class="stat-block-row">
 							<div class="stat-row">
-								<label for="inteligence">Inteligência</label>
-								<input type="number" id="inteligence" name="inteligence" min="0" max="20" />
+								<label for="inteligence">INT</label>
+								<input
+									class="stat-input"
+									type="number"
+									id="inteligence"
+									name="inteligence"
+									min="0"
+									max="20"
+								/>
 							</div>
 							<div class="stat-row">
-								<label for="wisdom">Sabedoria</label>
-								<input type="number" id="wisdom" name="wisdom" min="0" max="20" />
+								<label for="wisdom">SAB</label>
+								<input class="stat-input" type="number" id="wisdom" name="wisdom" min="0" max="20" />
 							</div>
 							<div class="stat-row">
-								<label for="charisma">Carisma</label>
-								<input type="number" id="charisma" name="charisma" min="0" max="20" />
+								<label for="charisma">CAR</label>
+								<input
+									class="stat-input"
+									type="number"
+									id="charisma"
+									name="charisma"
+									min="0"
+									max="20"
+								/>
 							</div>
 						</div>
 					</div>
+					<div>
+						<aside class="stat-block-side">
+							<div class="stat-block-description">
+								<text></text>
+								<text>Atu.</text>
+								<text>Máx.</text>
+							</div>
+							<div class="stat-block-row">
+								<label for="health">PV</label>
+								<input class="stat-input" type="number" id="health" name="health" min="0" max="100" />
+								/
+								<input class="stat-input" type="number" id="health" name="health" min="0" max="100" />
+							</div>
+							<div class="stat-block-row">
+								<label for="energy">PM</label>
+								<input class="stat-input" type="number" id="energy" name="energy" min="0" max="100" />
+								/
+								<input class="stat-input" type="number" id="energy" name="energy" min="0" max="100" />
+							</div>
+							<div class="stat-block-row">
+								<label for="armor">PE</label>
+								<input class="stat-input" type="number" id="armor" name="armor" min="0" max="20" />
+								/
+								<input class="stat-input" type="number" id="armor" name="armor" min="0" max="20" />
+							</div>
+						</aside>
+					</div>
+				</section>
 			</main>
 		</div>
 		<footer>

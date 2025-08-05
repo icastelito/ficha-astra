@@ -143,6 +143,699 @@
 					</div>
 				</section>
 			</main>
+			<section class="separator-line">
+				<div class="line"></div>
+				<h5 class="philosopher-bold">Astra</h5>
+
+				<div class="line"></div>
+			</section>
+			<main class="character-abilities-container">
+				<section class="character-skills">
+					<div class="skills-header">
+						<h2>Perícias</h2>
+						<div class="sort-buttons">
+							<button type="button" class="sort-btn" onclick="sortSkills('alphabetic')">A-Z</button>
+							<button type="button" class="sort-btn" onclick="sortSkills('attribute')">Atributo</button>
+						</div>
+					</div>
+					<div class="skills-container" id="skills-container">
+						<!-- Força -->
+						<div class="skill" data-attribute="FOR">
+							<div class="skill-checkbox">
+								<input type="checkbox" id="athletics-trained" class="skill-trained" />
+								<label for="athletics-trained" class="checkbox-label"></label>
+							</div>
+							<label for="athletics" class="skill-name">Atletismo (For)</label>
+							<input
+								type="number"
+								id="athletics"
+								name="athletics"
+								min="0"
+								max="20"
+								class="skill-input"
+								data-base-attr="strength"
+							/>
+						</div>
+						<div class="skill" data-attribute="FOR">
+							<div class="skill-checkbox">
+								<input type="checkbox" id="fortitude-trained" class="skill-trained" />
+								<label for="fortitude-trained" class="checkbox-label"></label>
+							</div>
+							<label for="fortitude" class="skill-name">Fortitude (For) Φ</label>
+							<input
+								type="number"
+								id="fortitude"
+								name="fortitude"
+								min="0"
+								max="20"
+								class="skill-input"
+								data-base-attr="strength"
+							/>
+						</div>
+						<div class="skill" data-attribute="FOR">
+							<div class="skill-checkbox">
+								<input type="checkbox" id="threaten-trained" class="skill-trained" />
+								<label for="threaten-trained" class="checkbox-label"></label>
+							</div>
+							<label for="threaten" class="skill-name">Ameaçar (For)</label>
+							<input
+								type="number"
+								id="threaten"
+								name="threaten"
+								min="0"
+								max="20"
+								class="skill-input"
+								data-base-attr="strength"
+							/>
+						</div>
+						<div class="skill" data-attribute="FOR">
+							<div class="skill-checkbox">
+								<input type="checkbox" id="demolition-trained" class="skill-trained" />
+								<label for="demolition-trained" class="checkbox-label"></label>
+							</div>
+							<label for="demolition" class="skill-name">Demolição (For)</label>
+							<input
+								type="number"
+								id="demolition"
+								name="demolition"
+								min="0"
+								max="20"
+								class="skill-input"
+								data-base-attr="strength"
+							/>
+						</div>
+
+						<!-- Agilidade -->
+						<div class="skill" data-attribute="AGI">
+							<div class="skill-checkbox">
+								<input type="checkbox" id="acrobatics-trained" class="skill-trained" />
+								<label for="acrobatics-trained" class="checkbox-label"></label>
+							</div>
+							<label for="acrobatics" class="skill-name">Acrobacia (Agi)</label>
+							<input
+								type="number"
+								id="acrobatics"
+								name="acrobatics"
+								min="0"
+								max="20"
+								class="skill-input"
+								data-base-attr="agility"
+							/>
+						</div>
+						<div class="skill" data-attribute="AGI">
+							<div class="skill-checkbox">
+								<input type="checkbox" id="stealth-trained" class="skill-trained" />
+								<label for="stealth-trained" class="checkbox-label"></label>
+							</div>
+							<label for="stealth" class="skill-name">Furtividade (Agi)</label>
+							<input
+								type="number"
+								id="stealth"
+								name="stealth"
+								min="0"
+								max="20"
+								class="skill-input"
+								data-base-attr="agility"
+							/>
+						</div>
+						<div class="skill" data-attribute="AGI">
+							<div class="skill-checkbox">
+								<input type="checkbox" id="piloting-trained" class="skill-trained" />
+								<label for="piloting-trained" class="checkbox-label"></label>
+							</div>
+							<label for="piloting" class="skill-name">Pilotagem (Agi)</label>
+							<input
+								type="number"
+								id="piloting"
+								name="piloting"
+								min="0"
+								max="20"
+								class="skill-input"
+								data-base-attr="agility"
+							/>
+						</div>
+						<div class="skill" data-attribute="AGI">
+							<div class="skill-checkbox">
+								<input type="checkbox" id="reflexes-trained" class="skill-trained" />
+								<label for="reflexes-trained" class="checkbox-label"></label>
+							</div>
+							<label for="reflexes" class="skill-name">Reflexos (Agi) Φ</label>
+							<input
+								type="number"
+								id="reflexes"
+								name="reflexes"
+								min="0"
+								max="20"
+								class="skill-input"
+								data-base-attr="agility"
+							/>
+						</div>
+
+						<!-- Precisão -->
+						<div class="skill" data-attribute="PRE">
+							<div class="skill-checkbox">
+								<input type="checkbox" id="handling-trained" class="skill-trained" />
+								<label for="handling-trained" class="checkbox-label"></label>
+							</div>
+							<label for="handling" class="skill-name">Manuseio (Pre) Φ</label>
+							<input
+								type="number"
+								id="handling"
+								name="handling"
+								min="0"
+								max="20"
+								class="skill-input"
+								data-base-attr="precision"
+							/>
+						</div>
+						<div class="skill" data-attribute="PRE">
+							<div class="skill-checkbox">
+								<input type="checkbox" id="lockpicking-trained" class="skill-trained" />
+								<label for="lockpicking-trained" class="checkbox-label"></label>
+							</div>
+							<label for="lockpicking" class="skill-name">Ladinagem (Pre)</label>
+							<input
+								type="number"
+								id="lockpicking"
+								name="lockpicking"
+								min="0"
+								max="20"
+								class="skill-input"
+								data-base-attr="precision"
+							/>
+						</div>
+						<div class="skill" data-attribute="PRE">
+							<div class="skill-checkbox">
+								<input type="checkbox" id="aiming-trained" class="skill-trained" />
+								<label for="aiming-trained" class="checkbox-label"></label>
+							</div>
+							<label for="aiming" class="skill-name">Pontaria (Pre)</label>
+							<input
+								type="number"
+								id="aiming"
+								name="aiming"
+								min="0"
+								max="20"
+								class="skill-input"
+								data-base-attr="precision"
+							/>
+						</div>
+						<div class="skill" data-attribute="PRE">
+							<div class="skill-checkbox">
+								<input type="checkbox" id="disarm-trained" class="skill-trained" />
+								<label for="disarm-trained" class="checkbox-label"></label>
+							</div>
+							<label for="disarm" class="skill-name">Desarme (Pre)</label>
+							<input
+								type="number"
+								id="disarm"
+								name="disarm"
+								min="0"
+								max="20"
+								class="skill-input"
+								data-base-attr="precision"
+							/>
+						</div>
+
+						<!-- Inteligência -->
+						<div class="skill" data-attribute="INT">
+							<div class="skill-checkbox">
+								<input type="checkbox" id="discernment-trained" class="skill-trained" />
+								<label for="discernment-trained" class="checkbox-label"></label>
+							</div>
+							<label for="discernment" class="skill-name">Discernimento (Int) Φ</label>
+							<input
+								type="number"
+								id="discernment"
+								name="discernment"
+								min="0"
+								max="20"
+								class="skill-input"
+								data-base-attr="inteligence"
+							/>
+						</div>
+						<div class="skill" data-attribute="INT">
+							<div class="skill-checkbox">
+								<input type="checkbox" id="history-trained" class="skill-trained" />
+								<label for="history-trained" class="checkbox-label"></label>
+							</div>
+							<label for="history" class="skill-name">História (Int)</label>
+							<input
+								type="number"
+								id="history"
+								name="history"
+								min="0"
+								max="20"
+								class="skill-input"
+								data-base-attr="inteligence"
+							/>
+						</div>
+						<div class="skill" data-attribute="INT">
+							<div class="skill-checkbox">
+								<input type="checkbox" id="occultism-trained" class="skill-trained" />
+								<label for="occultism-trained" class="checkbox-label"></label>
+							</div>
+							<label for="occultism" class="skill-name">Ocultismo (Int)</label>
+							<input
+								type="number"
+								id="occultism"
+								name="occultism"
+								min="0"
+								max="20"
+								class="skill-input"
+								data-base-attr="inteligence"
+							/>
+						</div>
+						<div class="skill" data-attribute="INT">
+							<div class="skill-checkbox">
+								<input type="checkbox" id="nobility-trained" class="skill-trained" />
+								<label for="nobility-trained" class="checkbox-label"></label>
+							</div>
+							<label for="nobility" class="skill-name">Nobreza (Int)</label>
+							<input
+								type="number"
+								id="nobility"
+								name="nobility"
+								min="0"
+								max="20"
+								class="skill-input"
+								data-base-attr="inteligence"
+							/>
+						</div>
+						<div class="skill" data-attribute="INT">
+							<div class="skill-checkbox">
+								<input type="checkbox" id="religion-trained" class="skill-trained" />
+								<label for="religion-trained" class="checkbox-label"></label>
+							</div>
+							<label for="religion" class="skill-name">Religião (Int)</label>
+							<input
+								type="number"
+								id="religion"
+								name="religion"
+								min="0"
+								max="20"
+								class="skill-input"
+								data-base-attr="inteligence"
+							/>
+						</div>
+						<div class="skill" data-attribute="INT">
+							<div class="skill-checkbox">
+								<input type="checkbox" id="war-trained" class="skill-trained" />
+								<label for="war-trained" class="checkbox-label"></label>
+							</div>
+							<label for="war" class="skill-name">Guerra (Int)</label>
+							<input
+								type="number"
+								id="war"
+								name="war"
+								min="0"
+								max="20"
+								class="skill-input"
+								data-base-attr="inteligence"
+							/>
+						</div>
+						<div class="skill" data-attribute="INT">
+							<div class="skill-checkbox">
+								<input type="checkbox" id="arcanism-trained" class="skill-trained" />
+								<label for="arcanism-trained" class="checkbox-label"></label>
+							</div>
+							<label for="arcanism" class="skill-name">Arcanismo (Int)</label>
+							<input
+								type="number"
+								id="arcanism"
+								name="arcanism"
+								min="0"
+								max="20"
+								class="skill-input"
+								data-base-attr="inteligence"
+							/>
+						</div>
+						<div class="skill" data-attribute="INT">
+							<div class="skill-checkbox">
+								<input type="checkbox" id="medicine-trained" class="skill-trained" />
+								<label for="medicine-trained" class="checkbox-label"></label>
+							</div>
+							<label for="medicine" class="skill-name">Medicina (Int)</label>
+							<input
+								type="number"
+								id="medicine"
+								name="medicine"
+								min="0"
+								max="20"
+								class="skill-input"
+								data-base-attr="inteligence"
+							/>
+						</div>
+						<div class="skill" data-attribute="INT">
+							<div class="skill-checkbox">
+								<input type="checkbox" id="biology-trained" class="skill-trained" />
+								<label for="biology-trained" class="checkbox-label"></label>
+							</div>
+							<label for="biology" class="skill-name">Biologia (Int)</label>
+							<input
+								type="number"
+								id="biology"
+								name="biology"
+								min="0"
+								max="20"
+								class="skill-input"
+								data-base-attr="inteligence"
+							/>
+						</div>
+						<div class="skill" data-attribute="INT">
+							<div class="skill-checkbox">
+								<input type="checkbox" id="technology-trained" class="skill-trained" />
+								<label for="technology-trained" class="checkbox-label"></label>
+							</div>
+							<label for="technology" class="skill-name">Tecnologia (Int)</label>
+							<input
+								type="number"
+								id="technology"
+								name="technology"
+								min="0"
+								max="20"
+								class="skill-input"
+								data-base-attr="inteligence"
+							/>
+						</div>
+
+						<!-- Sabedoria -->
+						<div class="skill" data-attribute="SAB">
+							<div class="skill-checkbox">
+								<input type="checkbox" id="intuition-trained" class="skill-trained" />
+								<label for="intuition-trained" class="checkbox-label"></label>
+							</div>
+							<label for="intuition" class="skill-name">Intuição (Sab)</label>
+							<input
+								type="number"
+								id="intuition"
+								name="intuition"
+								min="0"
+								max="20"
+								class="skill-input"
+								data-base-attr="wisdom"
+							/>
+						</div>
+						<div class="skill" data-attribute="SAB">
+							<div class="skill-checkbox">
+								<input type="checkbox" id="perception-trained" class="skill-trained" />
+								<label for="perception-trained" class="checkbox-label"></label>
+							</div>
+							<label for="perception" class="skill-name">Percepção (Sab)</label>
+							<input
+								type="number"
+								id="perception"
+								name="perception"
+								min="0"
+								max="20"
+								class="skill-input"
+								data-base-attr="wisdom"
+							/>
+						</div>
+						<div class="skill" data-attribute="SAB">
+							<div class="skill-checkbox">
+								<input type="checkbox" id="survival-trained" class="skill-trained" />
+								<label for="survival-trained" class="checkbox-label"></label>
+							</div>
+							<label for="survival" class="skill-name">Sobrevivência (Sab)</label>
+							<input
+								type="number"
+								id="survival"
+								name="survival"
+								min="0"
+								max="20"
+								class="skill-input"
+								data-base-attr="wisdom"
+							/>
+						</div>
+						<div class="skill" data-attribute="SAB">
+							<div class="skill-checkbox">
+								<input type="checkbox" id="nature-trained" class="skill-trained" />
+								<label for="nature-trained" class="checkbox-label"></label>
+							</div>
+							<label for="nature" class="skill-name">Natureza (Sab)</label>
+							<input
+								type="number"
+								id="nature"
+								name="nature"
+								min="0"
+								max="20"
+								class="skill-input"
+								data-base-attr="wisdom"
+							/>
+						</div>
+						<div class="skill" data-attribute="SAB">
+							<div class="skill-checkbox">
+								<input type="checkbox" id="will-trained" class="skill-trained" />
+								<label for="will-trained" class="checkbox-label"></label>
+							</div>
+							<label for="will" class="skill-name">Vontade (Sab) Φ</label>
+							<input
+								type="number"
+								id="will"
+								name="will"
+								min="0"
+								max="20"
+								class="skill-input"
+								data-base-attr="wisdom"
+							/>
+						</div>
+						<div class="skill" data-attribute="SAB">
+							<div class="skill-checkbox">
+								<input type="checkbox" id="priesthood-trained" class="skill-trained" />
+								<label for="priesthood-trained" class="checkbox-label"></label>
+							</div>
+							<label for="priesthood" class="skill-name">Sacerdócio (Sab)</label>
+							<input
+								type="number"
+								id="priesthood"
+								name="priesthood"
+								min="0"
+								max="20"
+								class="skill-input"
+								data-base-attr="wisdom"
+							/>
+						</div>
+						<div class="skill" data-attribute="SAB">
+							<div class="skill-checkbox">
+								<input type="checkbox" id="mysticism-trained" class="skill-trained" />
+								<label for="mysticism-trained" class="checkbox-label"></label>
+							</div>
+							<label for="mysticism" class="skill-name">Misticismo (Sab)</label>
+							<input
+								type="number"
+								id="mysticism"
+								name="mysticism"
+								min="0"
+								max="20"
+								class="skill-input"
+								data-base-attr="wisdom"
+							/>
+						</div>
+						<div class="skill" data-attribute="SAB">
+							<div class="skill-checkbox">
+								<input type="checkbox" id="healing-trained" class="skill-trained" />
+								<label for="healing-trained" class="checkbox-label"></label>
+							</div>
+							<label for="healing" class="skill-name">Curanderia (Sab)</label>
+							<input
+								type="number"
+								id="healing"
+								name="healing"
+								min="0"
+								max="20"
+								class="skill-input"
+								data-base-attr="wisdom"
+							/>
+						</div>
+
+						<!-- Carisma -->
+						<div class="skill" data-attribute="CAR">
+							<div class="skill-checkbox">
+								<input type="checkbox" id="charm-trained" class="skill-trained" />
+								<label for="charm-trained" class="checkbox-label"></label>
+							</div>
+							<label for="charm" class="skill-name">Charme (Car)</label>
+							<input
+								type="number"
+								id="charm"
+								name="charm"
+								min="0"
+								max="20"
+								class="skill-input"
+								data-base-attr="charisma"
+							/>
+						</div>
+						<div class="skill" data-attribute="CAR">
+							<div class="skill-checkbox">
+								<input type="checkbox" id="diplomacy-trained" class="skill-trained" />
+								<label for="diplomacy-trained" class="checkbox-label"></label>
+							</div>
+							<label for="diplomacy" class="skill-name">Diplomacia (Car)</label>
+							<input
+								type="number"
+								id="diplomacy"
+								name="diplomacy"
+								min="0"
+								max="20"
+								class="skill-input"
+								data-base-attr="charisma"
+							/>
+						</div>
+						<div class="skill" data-attribute="CAR">
+							<div class="skill-checkbox">
+								<input type="checkbox" id="deception-trained" class="skill-trained" />
+								<label for="deception-trained" class="checkbox-label"></label>
+							</div>
+							<label for="deception" class="skill-name">Enganação (Car)</label>
+							<input
+								type="number"
+								id="deception"
+								name="deception"
+								min="0"
+								max="20"
+								class="skill-input"
+								data-base-attr="charisma"
+							/>
+						</div>
+						<div class="skill" data-attribute="CAR">
+							<div class="skill-checkbox">
+								<input type="checkbox" id="performance-trained" class="skill-trained" />
+								<label for="performance-trained" class="checkbox-label"></label>
+							</div>
+							<label for="performance" class="skill-name">Atuação (Car)</label>
+							<input
+								type="number"
+								id="performance"
+								name="performance"
+								min="0"
+								max="20"
+								class="skill-input"
+								data-base-attr="charisma"
+							/>
+						</div>
+						<div class="skill" data-attribute="CAR">
+							<div class="skill-checkbox">
+								<input type="checkbox" id="intimidation-trained" class="skill-trained" />
+								<label for="intimidation-trained" class="checkbox-label"></label>
+							</div>
+							<label for="intimidation" class="skill-name">Intimidação (Car)</label>
+							<input
+								type="number"
+								id="intimidation"
+								name="intimidation"
+								min="0"
+								max="20"
+								class="skill-input"
+								data-base-attr="charisma"
+							/>
+						</div>
+						<div class="skill" data-attribute="CAR">
+							<div class="skill-checkbox">
+								<input type="checkbox" id="presence-trained" class="skill-trained" />
+								<label for="presence-trained" class="checkbox-label"></label>
+							</div>
+							<label for="presence" class="skill-name">Presença (Car) Φ</label>
+							<input
+								type="number"
+								id="presence"
+								name="presence"
+								min="0"
+								max="20"
+								class="skill-input"
+								data-base-attr="charisma"
+							/>
+						</div>
+					</div>
+				</section>
+				<section class="character-abilities">
+					<span class="abilities-header">
+						<h2>Anima</h2>
+					</span>
+					<div>
+						<input type="checkbox" id="anima-trained" class="ability-trained" />
+						<span class="ability-name"></span>Natura</span>
+						<input
+							id="natura"
+							name="natura"
+						/>
+					</div>
+					<div>
+						<input type="checkbox" id="anima-trained" class="ability-trained" />
+						<span class="ability-name">Intentum</span>
+						<textarea
+							id="intentum"
+							name="intentum"
+						></textarea>
+					</div>
+					<div>
+						<span class="ability-name">Égote</span>
+						<input
+							id="egote"
+							name="egote"
+						/>
+					</div>
+					<div>
+						<span class="ability-name">Logos</span>
+						<textarea
+							id="logos"
+							name="logos"
+						></textarea>
+					</div>
+					<div>
+						<span class="ability-name">Ethos</span>
+						<textarea
+							id="ethos"
+							name="ethos"
+						></textarea>
+					</div>
+					<div>
+						<textarea
+							id="other-abilities"
+							name="other-abilities"
+							placeholder="Outras habilidades..."
+						></textarea>
+						<textarea
+							id="pneuma"
+							name="pneuma"
+						></textarea>
+					</div>
+					<div>
+						<textarea
+							id="other-abilities"
+							name="other-abilities"
+							placeholder="Outras habilidades..."
+						></textarea>
+						<textarea
+							id="pneuma"
+							name="pneuma"
+						></textarea>
+					</div>
+					<div>
+						<textarea
+							id="other-abilities"
+							name="other-abilities"
+							placeholder="Outras habilidades..."
+						></textarea>
+						<textarea
+							id="pneuma"
+							name="pneuma"
+						></textarea>
+					</div>
+					<div>
+						<textarea
+							id="other-abilities"
+							name="other-abilities"
+							placeholder="Outras habilidades..."
+						></textarea>
+						<textarea
+							id="pneuma"
+							name="pneuma"
+						></textarea>
+					</div>
+
+				</section>
+			</main>
 		</div>
 		<footer>
 			<p>&copy; 2025 Sistema Astra</p>

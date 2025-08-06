@@ -54,6 +54,17 @@
 						id="character-image"
 						style="display: none"
 					/>
+					<!-- Campos de overlay sobre a imagem -->
+					<div class="overlay-fields">
+						<div class="overlay-field training-bonus top-left">
+							<label for="training-bonus">Bônus</label>
+							<input type="number" id="training-bonus" name="training-bonus" min="0" max="10" />
+						</div>
+						<div class="overlay-field character-level bottom-right">
+							<input type="number" id="level" name="level" min="1" max="20" />
+							<label for="level">Nível</label>
+						</div>
+					</div>
 				</section>
 				<section class="character-stats">
 					<div>
@@ -749,11 +760,63 @@
 					</div>
 				</section>
 				<section class="character-abilities">
-					<span class="abilities-header">
+					<section class="character-weapons">
+					<div class="weapons-table-header">
+						<h2>Armas & Ataques</h2>
+						<table class="weapons-table">
+							<thead class="weapons-thead">
+								<tr >
+									<th>Nome</th>
+									<th>Bônus</th>
+									<th>Dano</th>
+									<th>Notas</th>
+								</tr>
+							</thead>
+							<tbody id="weapons-tbody">
+								<tr>
+									<td><input type="text" class="weapon-input"  /></td>
+									<td><input type="text" class="weapon-input"  /></td>
+									<td><input type="text" class="weapon-input"   /></td>
+									<td><input type="text" class="weapon-input"    /></td>
+								</tr>
+								<tr>
+									<td><input type="text" class="weapon-input"  /></td>
+									<td><input type="text" class="weapon-input"  /></td>
+									<td><input type="text" class="weapon-input"   /></td>
+									<td><input type="text" class="weapon-input"    /></td>
+								</tr>
+								<tr>
+									<td><input type="text" class="weapon-input"  /></td>
+									<td><input type="text" class="weapon-input"  /></td>
+									<td><input type="text" class="weapon-input"   /></td>
+									<td><input type="text" class="weapon-input"    /></td>
+								</tr>
+								<tr>
+									<td><input type="text" class="weapon-input"  /></td>
+									<td><input type="text" class="weapon-input"  /></td>
+									<td><input type="text" class="weapon-input"   /></td>
+									<td><input type="text" class="weapon-input"    /></td>
+								</tr>
+								<tr>
+									<td><input type="text" class="weapon-input"  /></td>
+									<td><input type="text" class="weapon-input"  /></td>
+									<td><input type="text" class="weapon-input"   /></td>
+									<td><input type="text" class="weapon-input"    /></td>
+								</tr>
+							</tbody>
+						</table>
+						
+					</div>
+					
+
+				</section>
+			</main>
+		</div>
+		<div class='a4-container'>
+			<span class="abilities-header">
 						<h2>Anima</h2>
 					</span>
 					<div>
-						<input type="checkbox" id="anima-trained" class="ability-trained" />
 						<span class="ability-name"></span>Natura</span>
 						<input
 							id="natura"
@@ -761,7 +824,6 @@
 						/>
 					</div>
 					<div>
-						<input type="checkbox" id="anima-trained" class="ability-trained" />
 						<span class="ability-name">Intentum</span>
 						<textarea
 							id="intentum"
@@ -789,53 +851,7 @@
 							name="ethos"
 						></textarea>
 					</div>
-					<div>
-						<textarea
-							id="other-abilities"
-							name="other-abilities"
-							placeholder="Outras habilidades..."
-						></textarea>
-						<textarea
-							id="pneuma"
-							name="pneuma"
-						></textarea>
-					</div>
-					<div>
-						<textarea
-							id="other-abilities"
-							name="other-abilities"
-							placeholder="Outras habilidades..."
-						></textarea>
-						<textarea
-							id="pneuma"
-							name="pneuma"
-						></textarea>
-					</div>
-					<div>
-						<textarea
-							id="other-abilities"
-							name="other-abilities"
-							placeholder="Outras habilidades..."
-						></textarea>
-						<textarea
-							id="pneuma"
-							name="pneuma"
-						></textarea>
-					</div>
-					<div>
-						<textarea
-							id="other-abilities"
-							name="other-abilities"
-							placeholder="Outras habilidades..."
-						></textarea>
-						<textarea
-							id="pneuma"
-							name="pneuma"
-						></textarea>
-					</div>
-
-				</section>
-			</main>
+					
 		</div>
 		<footer>
 			<p>&copy; 2025 Sistema Astra</p>

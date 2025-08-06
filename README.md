@@ -6,7 +6,7 @@ Projeto ainda em desenvolvimento.
 
 ## Atividades
 
--   [ ] Informações básicas de personagem
+-   [x] Informações básicas de personagem
 -   [ ] Habilidades e poderes
 -   [ ] Equipamentos e itens
 -   [ ] Caracteristicas de Anima

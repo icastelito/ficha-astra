@@ -95,10 +95,9 @@ h2 {
 	font-family: "Philosopher", serif;
 	font-weight: 700;
 	color: var(--primary-color);
-	font-size: 1.4rem;
+	font-size: 5mm;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	margin-bottom: 15px;
 }
 
 .philosopher-bold {
@@ -171,6 +170,71 @@ h2 {
 
 .character-image-container:hover .character-icon {
 	color: var(--primary-color);
+}
+
+/* Campos de overlay sobre a imagem */
+.overlay-fields {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+}
+
+.overlay-field {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	pointer-events: auto;
+}
+
+.overlay-field label {
+	font-size: 2.5mm;
+	color: var(--primary-color);
+	font-family: "Comfortaa", sans-serif;
+	font-weight: 600;
+	text-transform: uppercase;
+	line-height: 1;
+}
+
+.overlay-field input {
+	width: 7mm;
+	height: 7mm;
+	border-radius: 7mm;
+	border: 1px solid var(--border-color);
+	border: none;
+	border-radius: 2px;
+	text-align: center;
+	font-size: 7px;
+	font-family: "Comfortaa", sans-serif;
+	font-weight: 700;
+	color: var(--primary-color);
+	padding: 0;
+}
+
+.overlay-field input:focus {
+	outline: none;
+	background-color: #ffffff;
+	box-shadow: 0 0 0 1px var(--accent-color);
+}
+
+.top-left {
+	top: 0;
+	left: 0;
+}
+
+.bottom-right {
+	bottom: 0;
+	right: 0;
+}
+
+.character-level {
+	right: 1mm;
 }
 
 .stat-block-side {
@@ -382,6 +446,106 @@ h2 {
 	margin-top: 5mm;
 	width: 60mm;
 }
+.character-weapons {
+	margin-top: 5mm;
+	width: 120mm;
+}
+
+.weapons-table-header {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.weapons-table {
+	width: 100%;
+	border-collapse: collapse;
+	border: 0.1mm solid var(--border-color);
+	background: var(--card-background);
+	table-layout: fixed;
+}
+
+.weapons-table tr {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.weapons-table th {
+	font-family: "Trajan-Pro-Regular", serif;
+	font-weight: 700;
+	color: var(--primary-color);
+	font-size: 2mm;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	text-align: center;
+	background: var(--background-color);
+}
+
+.weapons-table th:nth-child(1),
+.weapons-table td:nth-child(1) {
+	width: 40mm;
+}
+
+.weapons-table th:nth-child(2),
+.weapons-table td:nth-child(2) {
+	width: 15mm;
+}
+.weapons-table th:nth-child(3),
+.weapons-table td:nth-child(3) {
+	width: 15mm;
+}
+.weapons-table th:nth-child(4),
+.weapons-table td:nth-child(4) {
+	width: 50mm;
+}
+
+.weapons-table td {
+	padding: 0.2mm;
+	border: 0.1mm solid var(--border-color);
+	text-align: center;
+	font-family: "Source Serif 4", serif;
+	font-size: 2mm;
+	width: 100%;
+	height: 5mm;
+	color: var(--text-color);
+}
+
+.weapon-input {
+	width: 100%;
+	border: none;
+	background: transparent;
+	text-align: center;
+	font-family: "Source Serif 4", serif;
+	font-size: 3mm;
+	color: var(--text-color);
+	padding: 0.1mm;
+	outline: none;
+}
+
+.weapon-input::placeholder {
+	color: var(--secondary-color);
+	opacity: 0.6;
+	font-style: italic;
+}
+
+.weapons-thead {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	font-family: "Trajan-Pro-Regular", serif;
+	font-size: 3mm;
+}
+
+.weapons-thead-row {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
 
 .skills-header {
 	display: flex;
@@ -523,6 +687,11 @@ h2 {
 	margin: 0;
 }
 
+.overlay-field input::-webkit-outer-spin-button,
+.overlay-field input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
 .skill-input[type="number"] {
 	appearance: textfield;
 	-moz-appearance: textfield;

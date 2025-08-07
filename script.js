@@ -112,3 +112,56 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 	}, 100);
 });
+
+// Função para exportar a ficha como PDF
+function exportToPDF() {
+	// Obter o nome do personagem para usar como nome do arquivo
+	const characterName = document.getElementById("name").value || "Ficha-Personagem";
+	const fileName = `${characterName.replace(/[^a-zA-Z0-9]/g, "-")}-Astra.pdf`;
+
+	// Selecionar todos os containers A4
+	const elements = document.querySelectorAll(".a4-container");
+
+	// Configurações do PDF
+	const opt = {
+		margin: 0,
+		filename: fileName,
+		image: { type: "jpeg", quality: 0.98 },
+		html2canvas: {
+			scale: 2,
+			useCORS: true,
+			letterRendering: true,
+			allowTaint: false,
+		},
+		jsPDF: {
+			unit: "mm",
+			format: "a4",
+			orientation: "portrait",
+		},
+	};
+
+	// Ocultar temporariamente o botão de exportar
+	const exportBtn = document.getElementById("export-pdf-btn");
+	const originalDisplay = exportBtn.style.display;
+	exportBtn.style.display = "none";
+
+	// Mostrar indicador de carregamento
+	exportBtn.innerHTML = '<ion-icon name="hourglass-outline"></ion-icon> Gerando PDF...';
+	exportBtn.style.display = originalDisplay;
+	exportBtn.disabled = true;
+
+	// Converter cada página A4 separadamente
+	let pdfPromise = Promise.resolve();
+
+	elements.forEach((element, index) => {
+		pdfPromise = pdfPromise.then(() => {
+			return html2pdf().set(opt).from(element).save();
+		});
+	});
+
+	// Restaurar o botão após a conversão
+	pdfPromise.finally(() => {
+		exportBtn.innerHTML = '<ion-icon name="download-outline"></ion-icon> Exportar PDF';
+		exportBtn.disabled = false;
+	});
+}

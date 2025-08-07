@@ -67,6 +67,54 @@ header {
 	margin-bottom: 20px;
 }
 
+.header-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 210mm;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.export-btn {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	padding: 8px 16px;
+	background: var(--primary-color);
+	color: white;
+	border: none;
+	border-radius: 5px;
+	font-family: "Trajan-Pro-Regular", serif;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.export-btn:hover {
+	background: var(--accent-color);
+	transform: translateY(-1px);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.export-btn ion-icon {
+	font-size: 16px;
+}
+
+/* Ocultar botão de exportar na impressão/PDF */
+@media print {
+	.export-btn {
+		display: none !important;
+	}
+
+	.header-content {
+		justify-content: center;
+	}
+}
+
 main {
 	width: 100%;
 }
@@ -200,41 +248,46 @@ h2 {
 	font-weight: 600;
 	text-transform: uppercase;
 	line-height: 1;
+	margin-bottom: 1mm;
 }
 
 .overlay-field input {
-	width: 7mm;
-	height: 7mm;
-	border-radius: 7mm;
-	border: 1px solid var(--border-color);
-	border: none;
-	border-radius: 2px;
+	width: 10mm;
+	height: 10mm;
+	border: 2px solid var(--border-color);
+	border-radius: 10mm;
+	background: transparent;
 	text-align: center;
-	font-size: 7px;
-	font-family: "Comfortaa", sans-serif;
+	font-size: 4.5mm;
+	font-family: "Trajan-Pro-Regular", serif;
 	font-weight: 700;
 	color: var(--primary-color);
 	padding: 0;
-}
-
-.overlay-field input:focus {
-	outline: none;
-	background-color: #ffffff;
-	box-shadow: 0 0 0 1px var(--accent-color);
+	transition: border-color 0.3s ease;
+	background-color: #ffffffdd;
 }
 
 .top-left {
-	top: 0;
-	left: 0;
+	top: -2mm;
+	left: -2mm;
 }
 
 .bottom-right {
-	bottom: 0;
-	right: 0;
+	bottom: -2mm;
+	right: -2mm;
 }
 
-.character-level {
-	right: 1mm;
+/* Remove os botões de spinner dos inputs number dos campos overlay */
+.overlay-field input::-webkit-outer-spin-button,
+.overlay-field input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Para Firefox */
+.overlay-field input[type="number"] {
+	appearance: textfield;
+	-moz-appearance: textfield;
 }
 
 .stat-block-side {
@@ -427,6 +480,37 @@ h2 {
 		box-shadow: none;
 		margin: 0;
 		padding: 15mm;
+		page-break-after: always;
+	}
+
+	.a4-container:last-child {
+		page-break-after: auto;
+	}
+
+	.export-btn {
+		display: none !important;
+	}
+
+	.header-content {
+		justify-content: center;
+	}
+
+	/* Garantir que os campos mantenham suas cores */
+	.overlay-field input,
+	.stat-input,
+	.skill-input,
+	.weapon-input,
+	.feature-textarea {
+		-webkit-print-color-adjust: exact;
+		color-adjust: exact;
+		print-color-adjust: exact;
+	}
+
+	/* Garantir que bordas e backgrounds sejam impressos */
+	* {
+		-webkit-print-color-adjust: exact;
+		color-adjust: exact;
+		print-color-adjust: exact;
 	}
 
 	@page {
@@ -455,14 +539,32 @@ h2 {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
+	border: 1px solid var(--border-color);
+	border-radius: 2mm;
+	background: var(--card-background);
+}
+
+.weapons-table-header h2 {
+	background: var(--background-color);
+	border-bottom: 1px solid var(--border-color);
+	padding: 1.5mm 3mm;
+	text-align: center;
+	margin: 0;
+	font-family: "Trajan-Pro-Regular", serif;
+	font-size: 2.5mm;
+	font-weight: 700;
+	color: var(--primary-color);
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
 }
 
 .weapons-table {
 	width: 100%;
 	border-collapse: collapse;
-	border: 0.1mm solid var(--border-color);
 	background: var(--card-background);
 	table-layout: fixed;
+	border: none;
+	margin: 0;
 }
 
 .weapons-table tr {
@@ -481,6 +583,8 @@ h2 {
 	letter-spacing: 0.5px;
 	text-align: center;
 	background: var(--background-color);
+	padding: 1mm;
+	border-bottom: 1px solid var(--border-color);
 }
 
 .weapons-table th:nth-child(1),
@@ -528,6 +632,12 @@ h2 {
 	color: var(--secondary-color);
 	opacity: 0.6;
 	font-style: italic;
+}
+
+.weapon-input:focus {
+	outline: none;
+	background: rgba(255, 255, 255, 0.3);
+	border-radius: 1mm;
 }
 
 .weapons-thead {
@@ -737,4 +847,102 @@ h2 {
 		width: 2.5mm;
 		height: 2.5mm;
 	}
+}
+
+/* Seções de Características, Traços e Talentos */
+.character-features {
+	width: 100%;
+	margin-top: 3mm;
+}
+
+.features-container {
+	display: flex;
+	flex-direction: column;
+	gap: 3mm;
+}
+
+.feature-section {
+	border: 1px solid var(--border-color);
+	border-radius: 2mm;
+	background: var(--card-background);
+}
+
+.feature-header {
+	background: var(--background-color);
+	border-bottom: 1px solid var(--border-color);
+	padding: 1.5mm 3mm;
+	text-align: center;
+}
+
+.feature-header h3 {
+	font-family: "Trajan-Pro-Regular", serif;
+	font-size: 2.5mm;
+	font-weight: 700;
+	color: var(--primary-color);
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	margin: 0;
+}
+
+.feature-content {
+	padding: 2mm;
+	display: flex;
+	gap: 2mm;
+}
+
+.feature-textarea {
+	width: 100%;
+	min-height: 25mm;
+	border: none;
+	background: transparent;
+	font-family: "Source Serif 4", serif;
+	font-size: 2.5mm;
+	color: var(--text-color);
+	padding: 1mm;
+	resize: vertical;
+	line-height: 1.4;
+}
+
+.feature-textarea:focus {
+	outline: none;
+	background: rgba(255, 255, 255, 0.3);
+	border-radius: 1mm;
+}
+
+.feature-textarea::placeholder {
+	color: var(--secondary-color);
+	opacity: 0.6;
+	font-style: italic;
+}
+
+/* Características de Classe - Layout com divisor */
+.class-features .feature-content {
+	min-height: 30mm;
+}
+
+.feature-left,
+.feature-right {
+	flex: 1;
+}
+
+.feature-divider {
+	width: 1px;
+	background: var(--border-color);
+	margin: 0 1mm;
+}
+
+/* Container para Traço de Espécies e Talentos lado a lado */
+.features-row {
+	display: flex;
+	gap: 3mm;
+}
+
+.species-traits,
+.talents {
+	flex: 1;
+}
+
+.species-traits .feature-content,
+.talents .feature-content {
+	min-height: 25mm;
 }

@@ -6,12 +6,19 @@
 		<title>Ficha de Personagem - Sistema Astra</title>
 		<link rel="stylesheet" href="styles.css" />
 		<script src="script.js" defer></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 		<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 		<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 	</head>
 	<body>
 		<header>
-			<h1 class="philosopher-bold">Ficha de Personagem - Astra</h1>
+			<div class="header-content">
+				<h1 class="philosopher-bold">Ficha de Personagem - Astra</h1>
+				<button id="export-pdf-btn" class="export-btn" onclick="exportToPDF()">
+					<ion-icon name="download-outline"></ion-icon>
+					Exportar PDF
+				</button>
+			</div>
 		</header>
 		<div class="a4-container">
 			<main class="character-header">
@@ -809,6 +816,50 @@
 					</div>
 					
 
+				</section>
+
+				<!-- Seções de características, traços e talentos -->
+				<section class="character-features">
+					<div class="features-container">
+						<!-- Características de Classe -->
+						<div class="feature-section class-features">
+							<div class="feature-header">
+								<h3>CARACTERÍSTICAS DE CLASSE</h3>
+							</div>
+							<div class="feature-content">
+								<div class="feature-left">
+									<textarea class="feature-textarea" placeholder="Digite as características da sua classe..."></textarea>
+								</div>
+								<div class="feature-divider"></div>
+								<div class="feature-right">
+									<textarea class="feature-textarea" placeholder="Características adicionais..."></textarea>
+								</div>
+							</div>
+						</div>
+
+						<!-- Container para Traço de Espécies e Talentos -->
+						<div class="features-row">
+							<!-- Traço de Espécies -->
+							<div class="feature-section species-traits">
+								<div class="feature-header">
+									<h3>TRAÇO DE ESPÉCIES</h3>
+								</div>
+								<div class="feature-content">
+									<textarea class="feature-textarea" placeholder="Digite os traços da sua espécie..."></textarea>
+								</div>
+							</div>
+
+							<!-- Talentos -->
+							<div class="feature-section talents">
+								<div class="feature-header">
+									<h3>TALENTOS</h3>
+								</div>
+								<div class="feature-content">
+									<textarea class="feature-textarea" placeholder="Digite seus talentos..."></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
 				</section>
 			</main>
 		</div>

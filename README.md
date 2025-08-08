@@ -1,17 +1,4 @@
-# Ficha de Personagem do sistema Astra
+# Projeto descontinuado
 
-Esta é uma ficha de personagem para o sistema Astra, que pode ser usada para registrar informações sobre personagens em jogos de RPG ou outras atividades relacionadas.
-
-Projeto ainda em desenvolvimento.
-
-## Atividades
-
--   [x] Informações básicas de personagem
--   [ ] Habilidades e poderes
--   [ ] Equipamentos e itens
--   [ ] Caracteristicas de Anima
--   [ ] Anotações e histórico
--   [ ] Personalização da ficha
--   [ ] Exportação e impressão
--   [ ] Cálculo automático de atributos
--   [ ] Estilização e temas
+Este projeto foi descontinuado e não está mais sendo desenvolvido. Sua finalidade agora está sendo desenvolvida em outro repositório.
+Para mais informações, visite o repositório atualizado: [https://github.com/icastelito/RPG-content-cards](https://github.com/icastelito/RPG-content-cards)
